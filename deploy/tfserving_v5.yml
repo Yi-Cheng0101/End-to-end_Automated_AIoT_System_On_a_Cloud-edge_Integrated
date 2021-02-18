@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tfserving-deployment-v5
+  labels:
+    app: tfserving
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: tfserving
+  template:
+    metadata:
+      labels:
+        app: tfserving
+    spec:
+      containers:
+      - name: tfserving
+        image: riyazhu/tf-serving:v5
+        imagePullPolicy: Always
+        ports:
+        - name: tfs-service
+          containerPort: 8505
+          #          hostPort: 8505

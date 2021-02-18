@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tfserving-deployment-v3
+  labels:
+    app: tfserving
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: tfserving
+  template:
+    metadata:
+      labels:
+        app: tfserving
+    spec:
+      containers:
+      - name: tfserving
+        image: cwhuang29/tf-serving:v3
+        ports:
+        - containerPort: 8503
+          hostPort: 8503

@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tfserving-deployment
+  labels:
+    app: tfserving
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: tfserving
+  template:
+    metadata:
+      labels:
+        app: tfserving
+    spec:
+      containers:
+      - name: tfserving
+        image: {DockerName}/tf-serving:v1
+        ports:
+        - containerPort: 8501
+          hostPort: 8501

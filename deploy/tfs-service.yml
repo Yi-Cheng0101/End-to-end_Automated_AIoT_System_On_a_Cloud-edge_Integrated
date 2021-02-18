@@ -1,0 +1,15 @@
+# If the environment is KubeEdge,
+# you don't need to apply this yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: tfs-service
+spec:
+  type: NodePort
+  ports:
+  - port: 8505
+    #nodePort: 30305
+    protocol: TCP
+    targetPort: 8505
+  selector:
+    app: tfserving
