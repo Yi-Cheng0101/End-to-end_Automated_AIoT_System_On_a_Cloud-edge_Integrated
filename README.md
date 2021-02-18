@@ -1,3 +1,5 @@
+![image](https://github.com/Yi-Cheng0101/Watchman_Build_an_End-to-end_Automated_Surveillance_AIoT_System_On_a_Cloud-edge_Integrated-/blob/master/AIoT_img_0.jpeg)
+
 # DL-Pipeline-Tutorial
 ![image](https://github.com/NTHU-LSALAB/DL-Pipeline-Tutorial/blob/main/picture/system.png)
 ![image](https://github.com/NTHU-LSALAB/DL-Pipeline-Tutorial/blob/main/picture/MLPipeline.png)
